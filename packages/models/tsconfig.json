@@ -1,0 +1,26 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es2019",
+		"lib": [
+			"esnext",
+			"esnext.array",
+			"esnext.asynciterable",
+			"esnext.intl",
+			"esnext.symbol"
+		],
+		"sourceMap": true,
+		"inlineSources": true,
+		"sourceRoot": "./src",
+		"outDir": "dist",
+		"incremental": true,
+		"noEmitHelpers": true,
+		"importHelpers": true,
+		"skipLibCheck": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"declaration": true,
+		"declarationDir": "typings"
+	}
+}
