@@ -14,11 +14,13 @@
 		],
 		"sourceMap": true,
 		"inlineSources": true,
-		"sourceRoot": "./",
+		"sourceRoot": "./src",
 		"outDir": "dist",
 		"incremental": true,
 		"noEmitHelpers": true,
 		"importHelpers": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true
 	}
 }

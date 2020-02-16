@@ -1,5 +1,5 @@
 {
-	"name": "bot",
+	"name": "@yukikaze/bot",
 	"version": "0.1.0",
 	"description": "",
 	"main": "dist/bot.js",
@@ -10,17 +10,18 @@
 		"prebuild": "pnpm run lint",
 		"build": "rimraf dist && tsc",
 		"lint": "pnpm run lint:fix",
-		"lint:fix": "eslint . --ext .ts --fix",
-		"graphql:codegen": "graphql-codegen",
+		"lint:fix": "eslint src --ext .ts --fix",
 		"dev": "node -r dotenv/config dist/bot.js",
 		"sentry:release": "sentry-cli releases new --finalize $VERSION",
 		"sentry:sourcemaps": "sentry-cli releases files $VERSION upload-sourcemaps --ext map dist",
-		"sentry:commits": "sentry-cli releases set-commits --auto $VERSION"
+		"sentry:commits": "sentry-cli releases set-commits --auto $VERSION",
+		"graphql:generate": "graphql-codegen"
 	},
 	"dependencies": {
 		"@naval-base/ms": "^3.1.0",
 		"@sentry/integrations": "^5.12.0",
 		"@sentry/node": "^5.12.3",
+		"@yukikaze/models": "workspace:^0.1.0",
 		"apollo-cache-inmemory": "^1.6.5",
 		"apollo-client": "^2.6.8",
 		"apollo-link-http": "^1.5.16",
